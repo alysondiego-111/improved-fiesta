@@ -1673,7 +1673,7 @@ function salvarApiKey(){
 async function apiCall(prompt, maxTokens=800){
   // Se tiver chave local, chama direto; senÃ£o usa o proxy seguro da Netlify Function
     if(_apiKey){
-    const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=' + _apiKey;
+    const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + _apiKey;
     const resp = await fetch(url, {
       method:'POST',
       headers:{'Content-Type':'application/json'},
